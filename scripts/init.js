@@ -20,6 +20,7 @@ const [name, author, description] = params;
 changeJsonSync(cwd('./package.json'), data => {
   const version = '0.0.1';
   const keyWords = name.split('-');
+  keyWords.unshift(name);
 
   const entryProps = {
     main: `dist/${name}.cjs.js`,
