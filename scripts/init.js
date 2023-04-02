@@ -29,7 +29,7 @@ changeJsonSync(cwd('./package.json'), data => {
 
   let repo = '';
   try {
-    repo = exec('git remote -v');
+    repo = exec('git remote -v') || '';
   } catch (error) {
     console.log('repo not exist');
   }
